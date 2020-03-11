@@ -1,18 +1,35 @@
 import React from 'react';
-import './Header.css'
+import './Header.css';
+
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
 
 function Header() {
     return (
         <header>
-             <i className="material-icons">
-            menu
-            </i>
+            
             <div>
             Bootcamp Ecommerce
             </div>
-        <i className="material-icons">
+        
+        <Router>
+      <div>
+            <Link to="/">
+            <i className="material-icons">
+            menu
+            </i>
+            </Link>
+            <Link to="/shopping-car">
+            <i className="material-icons">
             shopping_cart
-        </i>
+            </i>
+            </Link>
+        </div>
+        </Router>
         </header>
     )
 };
